@@ -8,7 +8,7 @@ function recurseMe(store, banks) {
   let str = banks.toString()
 
   if (store.includes(str)) {
-    console.log(str);
+    // console.log(str);
     return store.length - store.indexOf(str);
   } else {
     store.push(str)
@@ -22,7 +22,7 @@ function reallocate(banks) {
   let max = Math.max(...banks)
   let highestIndex = banks.findIndex(i => i === max)
   let each = Math.round(max / (banks.length - 1))
-  console.log('Max:', max, '\thighestIndex:', highestIndex, '\teach:', each);
+  // console.log('Max:', max, '\thighestIndex:', highestIndex, '\teach:', each);
   let result2 = []
   let c = (highestIndex + 1) % banks.length
   while (c !== highestIndex) {
@@ -40,3 +40,4 @@ function reallocate(banks) {
 }
 
 answer = solveday6(`14	0	15	12	11	11	3	5	1	6	8	4	9	1	8	4`)
+console.log('answer:', answer);
